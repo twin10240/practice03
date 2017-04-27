@@ -9,6 +9,7 @@ public class CalcApp {
 		
 		while( true ) {
 			/*  코드를 완성 합니다 */
+			break;
 		}
 		
 		scanner.close();
