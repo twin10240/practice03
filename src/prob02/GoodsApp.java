@@ -1,6 +1,5 @@
 package prob02;
 
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class GoodsApp {
@@ -16,15 +15,12 @@ public class GoodsApp {
 		for (int i = 0; i < COUNT_GOODS; i++) {
 			String info = scanner.nextLine();
 			String[] tokens = info.split(" ");
-			
-			String name = tokens[0];
-			int price = Integer.parseInt(tokens[1]);
-			int countStock = Integer.parseInt(tokens[2]);
+			goods[i] = new Goods(tokens[0], Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
 		}
 		
 		//상품 정보 출력
 		for (Goods g : goods) {
-			
+			System.out.println(g.getName() + "(가격 :" + g.getPrice() + "원)이 " + g.getCountStock() + "개 입고 되었습니다.");
 		}
 		
 		// 자원정리
